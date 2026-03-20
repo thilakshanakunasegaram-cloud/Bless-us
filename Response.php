@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="Images/logo.png" alt="Bless Us Logo" height="50" class="me-2">
                 Bless Us
             </a>
@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Eventdetail.html">Event Details</a>
+                        <a class="nav-link" href="Eventdetail.php">Event Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Response.html">Response</a>
+                        <a class="nav-link active" href="Response.php">Response</a>
                     </li>
                 </ul>
             </div>
@@ -70,16 +70,16 @@
                     <div class="row g-4">
                         <div class="col-md-6">
                             <label for="firstName" class="form-label fw-bold">First Name *</label>
-                            <input type="text" class="form-control" id="firstName" required placeholder="John">
+                            <input type="text" class="form-control" id="firstName" name="firstName" required placeholder="John">
                         </div>
                         <div class="col-md-6">
                             <label for="lastName" class="form-label fw-bold">Last Name *</label>
-                            <input type="text" class="form-control" id="lastName" required placeholder="Doe">
+                            <input type="text" class="form-control" id="lastName" name="lastName" required placeholder="Doe">
                         </div>
 
                         <div class="col-12">
                             <label for="email" class="form-label fw-bold">Email Address *</label>
-                            <input type="email" class="form-control" id="email" required
+                            <input type="email" class="form-control" id="email" name="email" required
                                 placeholder="john.doe@example.com">
                         </div>
 
@@ -105,7 +105,7 @@
 
                         <div class="col-md-6 mt-4">
                             <label for="guests" class="form-label fw-bold">Number of Guests *</label>
-                            <select class="form-select" id="guests" required>
+                            <select class="form-select" id="guests" name="guests" required>
                                 <option value="" selected disabled>Select number...</option>
                                 <option value="1">1 (Just me)</option>
                                 <option value="2">2</option>
@@ -117,7 +117,7 @@
 
                         <div class="col-md-6 mt-4">
                             <label for="meal" class="form-label fw-bold">Meal Preference</label>
-                            <select class="form-select" id="meal">
+                            <select class="form-select" id="meal" name="meal">
                                 <option value="" selected disabled>Select meal...</option>
                                 <option value="Chicken">Non-Vegetarian</option>
                                 <option value="vegetarian">Vegetarian</option>
@@ -126,7 +126,7 @@
 
                         <div class="col-12 mt-4">
                             <label for="message" class="form-label fw-bold">Message for the Couple (Optional)</label>
-                            <textarea class="form-control" id="message" rows="2"
+                            <textarea class="form-control" id="message" name="message" rows="2"
                                 placeholder="Any dietary restrictions, song requests, or special notes..."></textarea>
                         </div>
 

@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <a class="navbar-brand d-flex align-items-center" href="index.php">
                 <img src="Images/logo.png" alt="Bless Us Logo" height="50" class="me-2">
                 Bless Us
             </a>
@@ -27,13 +27,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="Eventdetail.html">Event Details</a>
+                        <a class="nav-link active" href="Eventdetail.php">Event Details</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Response.html">Response</a>
+                        <a class="nav-link" href="Response.php">Response</a>
                     </li>
                 </ul>
             </div>

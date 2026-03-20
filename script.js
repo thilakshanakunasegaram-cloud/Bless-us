@@ -80,14 +80,32 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
             btn.disabled = true;
 
-            // Simulating an API call
-            setTimeout(() => {
+            // Send data to PHP backend
+            const formData = new FormData(rsvpForm);
+            
+            fetch('process.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
                 const responseMessage = document.getElementById('responseMessage');
-                responseMessage.innerHTML = '<div class="alert alert-success mt-3 rounded-3 shadow-sm text-center fw-bold"><i class="fa-solid fa-check-circle me-2"></i>Thank you for your response! We look forward to seeing you.</div>';
-                rsvpForm.reset();
+                if (data.status === 'success') {
+                    responseMessage.innerHTML = '<div class="alert alert-success mt-3 rounded-3 shadow-sm text-center fw-bold"><i class="fa-solid fa-check-circle me-2"></i>' + data.message + '</div>';
+                    rsvpForm.reset();
+                } else {
+                    responseMessage.innerHTML = '<div class="alert alert-danger mt-3 rounded-3 shadow-sm text-center fw-bold"><i class="fa-solid fa-circle-xmark me-2"></i>' + data.message + '</div>';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                const responseMessage = document.getElementById('responseMessage');
+                responseMessage.innerHTML = '<div class="alert alert-danger mt-3 rounded-3 shadow-sm text-center fw-bold"><i class="fa-solid fa-circle-xmark me-2"></i>An error occurred. Please try again.</div>';
+            })
+            .finally(() => {
                 btn.innerHTML = originalText;
                 btn.disabled = false;
-            }, 1500);
+            });
         });
     }
 

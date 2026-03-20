@@ -28,9 +28,10 @@ A beautiful, responsive wedding invitation web application for **Danni & Kichu**
 
 ```text
 Bless us/
-├── index.html          # Homepage with hero section and countdown
-├── Eventdetail.html    # Ceremony and Reception details
-├── Response.html       # RSVP / Response form page
+├── index.php          # Homepage with hero section and countdown
+├── Eventdetail.php    # Ceremony and Reception details
+├── Response.php       # RSVP / Response form page
+├── process.php        # Backend logic for RSVP form
 ├── style.css           # Custom styling and design tokens
 ├── script.js           # Countdown logic and form handling
 └── Images/             # Project images and assets
@@ -40,7 +41,7 @@ Bless us/
 ## 🚀 Getting Started
 
 1. **Clone/Download** the repository.
-2. Open `index.html` in any modern web browser.
+2. Serve the directory using a PHP server (e.g. `php -S localhost:8000`) and open `index.php` in a web browser.
 3. Navigate through the pages using the navigation bar.
 
 ---
